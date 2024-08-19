@@ -20,3 +20,6 @@ steps:
 
 images:
 - 'gcr.io/rich-elixir-432407-r8/angular-app:latest'
+
+options:
+  default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
