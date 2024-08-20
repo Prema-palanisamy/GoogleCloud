@@ -1,9 +1,9 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/rich-elixir-432407-r8/angular-app:latest', '.']
+  args: ['build', '-t', 'gcr.io/durable-circle-433106-g9/angular-app:latest', '.']
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/rich-elixir-432407-r8/angular-app:latest']
+  args: ['push', 'gcr.io/durable-circle-433106-g9/angular-app:latest']
 
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
@@ -11,7 +11,7 @@ steps:
   - 'deploy'
   - 'angular-app'
   - '--image'
-  - 'gcr.io/rich-elixir-432407-r8/angular-app:latest'
+  - 'gcr.io/durable-circle-433106-g9/angular-app:latest'
   - '--platform'
   - 'managed'
   - '--region'
@@ -19,7 +19,7 @@ steps:
   - '--allow-unauthenticated'
 
 images:
-- 'gcr.io/rich-elixir-432407-r8/angular-app:latest'
+- 'gcr.io/durable-circle-433106-g9/angular-app:latest'
 
 options:
   default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
