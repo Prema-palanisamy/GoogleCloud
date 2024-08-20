@@ -15,7 +15,7 @@ RUN echo "stage5"
 FROM nginx:alpine
 RUN echo "stage6"
 COPY --from=node app/dist/simple-ng-app /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 EXPOSE 80
 
 
