@@ -13,4 +13,4 @@ RUN npm install
 RUN npm run build --base-href .
 
 FROM nginx:alpine
-COPY --from=node /dist/anuglar-app/browser/ /usr/share/nginx/html
+COPY --from=node /dist/simple-ng-app/browser/ /usr/share/nginx/html
