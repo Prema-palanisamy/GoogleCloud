@@ -14,7 +14,7 @@ RUN npm run build
 RUN echo "stage5"
 FROM nginx:alpine
 RUN echo "stage6"
-EXPOSE 8080
+EXPOSE 80
 # COPY --from=node app/dist/simple-ng-app /dist
 #COPY nginx.conf /etc/nginx/nginx.conf
 
