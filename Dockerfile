@@ -13,4 +13,4 @@ RUN npm install
 RUN npm run build
 
 FROM nginx:alpine
-COPY --from=node /dist/simple-ng-app/browser/ /dist
+COPY --from=node /dist/simple-ng-app /dist
