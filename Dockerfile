@@ -10,7 +10,8 @@ COPY . .
 # Install dependencies
 RUN npm install
 
-RUN npm run build --base-href .
+RUN npm run build
 
 FROM nginx:alpine
-COPY --from=node /dist/simple-ng-app/browser/ /usr/share/nginx/html
+EXPOSE 80
+COPY --from=node /app/dist/simple-ng-app /dist
