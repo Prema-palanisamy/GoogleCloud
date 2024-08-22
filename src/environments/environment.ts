@@ -1,6 +1,6 @@
 export const environment = {
     production: false,
-    dbHost: 'localhost',
+    dbHost: 'https://node-repo2-xal4tfpr3q-uc.a.run.app/',
     port: 80
   };
   
