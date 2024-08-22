@@ -11,7 +11,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'simple-ng-app';
+  title = 'Angular';
   data!: any;
   
   constructor(private http: HttpClient) {}
@@ -19,7 +19,6 @@ export class AppComponent {
   ngOnInit(): void {
 
     const apiUrl = `${environment.dbHost} `;
-    console.log("innnk")
 
     this.http.get(apiUrl).subscribe({
       next: (response) => {
