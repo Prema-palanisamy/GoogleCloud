@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { environment } from '../environments/environment';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
-import { FileUploadService } from './services/file-upload.service';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +16,7 @@ export class AppComponent {
   private apiUrl1 = 'http://localhost:8080';
   uploadProgress: number | undefined;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
 
@@ -36,6 +34,9 @@ export class AppComponent {
     });
   }
 
+  moveToUrl() {
+    this.router.navigateByUrl("/upload")
+  }
 
 
 }
