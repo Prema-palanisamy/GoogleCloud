@@ -1,6 +1,6 @@
 export const environment = {
     production: false,
-    dbHost: 'http://localhost:8080',
+    dbHost: 'https://deva-node-3zi2jgwjrq-uc.a.run.app/',
     port: 8080
   };
   
