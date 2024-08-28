@@ -1,6 +1,6 @@
 export const environment = {
     production: false,
-    dbHost: 'https://nod-app-3zi2jgwjrq-uc.a.run.app/',
+    dbHost: 'https://localhost:4200',
     port: 8080
   };
   
