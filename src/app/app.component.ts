@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'Angular';
-  private apiUrl1 = 'https://deva-node-3zi2jgwjrq-uc.a.run.app/';
+  private apiUrl1 = 'https://nod-app-3zi2jgwjrq-uc.a.run.app/';
   uploadProgress: number | undefined;
 
   constructor(private http: HttpClient, private router: Router) {}
