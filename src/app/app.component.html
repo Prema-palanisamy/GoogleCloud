@@ -322,25 +322,10 @@
     </div>
   </div>
 </main>
-<!-- <button type="button" (click)="moveToUrl()">Click me to upload file to Cloud SQL!</button> -->
- <p>{{data}}</p>
- <table>
-  <thead>
-  <tr>
-    <th>ID</th>
-    <th>Tab Vote</th>
-    <th>Cast Vote</th>
-  </tr>
-</thead>
-  <tbody *ngFor="let row of data"> 
-  <tr >
-    <td>{{row.id}} </td>
-    <td>{{row.tabvote}} </td> 
-    <td>{{row.castvote}} </td>
-  
-  </tr>
-</tbody>
-</table>
+<div align="center"> 
+<button class="button" type="button" (click)="moveToUrl()">Click me to upload file to Cloud SQL!</button>
+<button type="button" (click)="moveToViewTableUrl()">view Data from Cloud SQL!</button>
+</div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->

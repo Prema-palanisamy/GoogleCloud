@@ -13,7 +13,6 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'Angular';
-  data: any= [];
   private apiUrl1 = 'https://deva-node-3zi2jgwjrq-uc.a.run.app/';
   uploadProgress: number | undefined;
 
@@ -23,22 +22,25 @@ export class AppComponent {
 
     const apiUrl = `${environment.dbHost} `;
     
-
-    this.http.get(apiUrl).subscribe({
-      next: (response) => {
-        console.log("response : ", response)
-        this.data = response;
-        console.log('Data received:', this.data);
-      },
-      error: (error) => {
-        console.error('Error fetching data:', error);
-      }
-    });
+  //   this.http.get(apiUrl).subscribe({
+  //     next: (response) => {
+  //       console.log("response : ", response)
+  //       this.data = response;
+  //       console.log('Data received:', this.data);
+  //     },
+  //     error: (error) => {
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   });
   }
 
   moveToUrl() {
     this.router.navigateByUrl("/upload")
   }
 
+  moveToViewTableUrl() {
+    // this.router.navigateByUrl("/view")
+    this.router.navigate(["/view"])
+  }
 
 }

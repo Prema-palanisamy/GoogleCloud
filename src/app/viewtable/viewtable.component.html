@@ -1,0 +1,19 @@
+<div>
+<table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Tab Vote</th>
+      <th>Cast Vote</th>
+    </tr>
+  </thead>
+    <tbody *ngFor="let row of data"> 
+    <tr >
+      <td>{{row.id}} </td>
+      <td>{{row.tabvote}} </td> 
+      <td>{{row.castvote}} </td>
+    
+    </tr>
+  </tbody>
+  </table>
+</div>
