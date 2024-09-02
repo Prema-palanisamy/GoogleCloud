@@ -3,11 +3,12 @@ import { Router, RouterOutlet } from '@angular/router';
 import { environment } from '../environments/environment';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HttpClientModule, CommonModule],
+  imports: [RouterOutlet, HttpClientModule, CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -19,27 +20,13 @@ export class AppComponent {
   constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
-
-    const apiUrl = `${environment.dbHost} `;
-    
-  //   this.http.get(apiUrl).subscribe({
-  //     next: (response) => {
-  //       console.log("response : ", response)
-  //       this.data = response;
-  //       console.log('Data received:', this.data);
-  //     },
-  //     error: (error) => {
-  //       console.error('Error fetching data:', error);
-  //     }
-  //   });
   }
 
   moveToUrl() {
     this.router.navigateByUrl("/upload")
   }
 
-  moveToViewTableUrl() {
-    // this.router.navigateByUrl("/view")
+  moveToViewTableUrl() {  
     this.router.navigate(["/view"])
   }
 

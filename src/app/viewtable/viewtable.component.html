@@ -1,4 +1,21 @@
 <div>
+
+  <div>
+    <form [formGroup]="inputForm">
+    <label>Enter number for Tab Vote</label>
+    <input id="tabVote" type="number" formControlName="tabVote">
+
+  <label>Enter number for Cast Vote</label>
+  <input id="castVote" type="number" formControlName="castVote">
+</form>
+</div>
+
+<button class="mr-4" type="button" (click)="save()">Save</button>
+<div>
+  <label>Enter id to delete</label>
+  <input [(ngModel)]="id" type="number">
+<button class="mr-4" type="button" (click)="delete()">delete</button>
+</div>
 <table>
     <thead>
     <tr>
