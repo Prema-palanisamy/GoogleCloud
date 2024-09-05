@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-upload',
@@ -10,8 +11,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 })
 export class UploadComponent {
 
-  private apiUrl = 'http://localhost:8080/upload'; // Replace with your backend URL
-
   constructor(private http: HttpClient) {}
 
   onFileChange(event: any): void {
@@ -19,8 +18,7 @@ export class UploadComponent {
     if (file) {
       const formData = new FormData();
       formData.append('file', file, file.name);
-      this.http.post(this.apiUrl,formData).subscribe({
-      // this.fileUploadService.uploadFile(file).subscribe({
+      this.http.post(`${environment.dbHost}/file`, formData).subscribe({
         next: (response) => {
           console.log("uploaded successfully ", response);
         },

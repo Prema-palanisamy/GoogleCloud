@@ -60,6 +60,7 @@ delete() {
   this.http.put(`${environment.dbHost}/delete`, {id : this.id}).subscribe({
       next: (response) => {
         console.log("uploaded successfully ", response);
+        this.get();
       },
       error: (error) => {
         console.error("error occured", error);
